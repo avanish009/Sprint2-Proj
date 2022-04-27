@@ -1,4 +1,6 @@
-#pragma once
+#ifndef HOTEL
+#define HOTEL
+
 #include <string>
 using namespace std;
 
@@ -33,3 +35,4 @@ public:
 	//gets the cost
 	double getCost();
 };
+#endif
