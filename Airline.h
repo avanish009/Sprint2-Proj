@@ -1,5 +1,5 @@
-#ifndef AIRLINE
-#define AIRLINE
+#ifndef AIRLINE_H
+#define AIRLINE_H
 
 #include <string>
 #include <vector>
