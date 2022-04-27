@@ -77,17 +77,7 @@ int main()
                         <<"Welcome, "
                         <<inName;
 		   trip.DestinationMenu();
-		   break;
-	   	}
-                cout<<"incorrect name or password\n";
-            }
-         
-        }
-        cout<<"\n\n\n\n\n"; //give it 5 newlines
-    }
-    return 1;
-
-	//Ask user to enter in their name
+			//Ask user to enter in their name
 //	string name;
 //	cout << "Enter your name: ";
 	cin >> name;
@@ -178,4 +168,15 @@ int main()
 	}
 
 	return 0;
+		   break;
+	   	}
+                cout<<"incorrect name or password\n";
+            }
+         
+        }
+        cout<<"\n\n\n\n\n"; //give it 5 newlines
+    }
+    return 1;
+
+	
 }
