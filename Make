@@ -1,0 +1,24 @@
+CC = g++
+CFLAGS = -g  -Wall -std=c++11 -Wextra 
+
+INCLUDES = -I header/
+
+run: main.o TripPlanner.o Airline.o Hotel.o
+	${CC} ${CFLAGS} main.o TripPlanner.o  Airline.o Hotel.o -o run
+
+main.o: main.cpp
+	${CC} ${CFLAGS} ${INCLUDES} -c main.cpp
+
+TripPlanner.o: src/TripPlanner.cpp
+	${CC} ${CFLAGS} ${INCLUDES} -c src/TripPlanner.cpp
+
+Airline.o: src/Airline.cpp
+	${CC} ${CFLAGS} ${INCLUDES} -c src/Airline.cpp
+
+Hotel.o: src/Hotel.cpp
+	${CC} ${CFLAGS} ${INCLUDES} -c src/Hotel.cpp
+
+
+clean:
+	echo "Cleaning....."
+	rm *.o run
