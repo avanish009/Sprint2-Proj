@@ -34,11 +34,18 @@ int main()
 	        {
        
             ofstream g("registration.dat");
+	    try{
+		    
             if (!g.is_open())
             {
-                cout<<"could not open file\n";
-                return 0;
+                throw"could not open file";
+		return 0;
             }
+	    }
+	    catch(const char *estr){
+		    cout<<estr<<endl;
+	    }
+
             cout<<"\n\n\n" //3 newlines
                 <<"New Username: ";
             getline(cin, registerName);
@@ -52,11 +59,17 @@ int main()
         if (command=="login")
         {
 		ifstream f("registration.dat");
+		try{
+
 		if (!f.is_open())
 		{
-			cout<<"could not open file\n"; 
+			throw"could not open file"; 
 			return 0;
 	    	}
+		}
+		catch(const char *estr){
+			cout<<estr<<endl;
+		}
 	      	getline(f, name, '\n');
 	       	getline(f, password, '\n'); 
 		f.close(); 
