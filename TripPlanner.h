@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "Airline.h"
-#include "Hotel.h"
+#include <Airline.h>
+#include <Hotel.h>
 
 
 using namespace std;

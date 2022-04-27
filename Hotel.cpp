@@ -4,7 +4,7 @@
 #include <vector>
 #include <fstream>
 #include <iomanip>
-#include "Hotel.h"
+#include <Hotel.h>
 
 using namespace std;
 
@@ -85,7 +85,7 @@ void Hotel::Search()
 	const char separator = ' ';
 
 	cout << "Choose from the following: " << endl;
-	for (int i = 0; i < FoundHotels.size(); i++)
+	for (unsigned long int i = 0; i < FoundHotels.size(); i++)
 	{
 		cout << i << ". " << left << setw(width) << setfill(separator) << FoundHotels[i] 
 			<< left << setw(width) << setfill (separator) << FoundCity[i] 

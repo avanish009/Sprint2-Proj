@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iomanip>
 #include <vector>
-#include "Airline.h"
+#include <Airline.h>
 
 using namespace std;
 
@@ -97,7 +97,7 @@ void Airline::Search()
 	const char separator = ' ';
 
 	cout << "Choose from the following: " << endl;
-	for (int i = 0; i < Foundcompany.size(); i++)
+	for (unsigned long int i = 0; i < Foundcompany.size(); i++)
 	{
 		cout << i << ". " << left << setw(width) << setfill(separator) << Foundcompany[i] << left << setw(width) << setfill(separator)
 			<< FoundseatClass[i] << left << setw(width) << setfill(separator) 

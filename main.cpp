@@ -2,11 +2,10 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include "TripPlanner.h"
-#include "Airline.h"
-//#include "Food.h"
-#include "Hotel.h"
-//#include "ThingsToDo.h"
+#include <TripPlanner.h>
+#include <Airline.h>
+#include <Hotel.h>
+
 
 
 using namespace std;
