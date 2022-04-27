@@ -1,5 +1,6 @@
-#ifndef TRIPPLANNER
-#define TRIPPLANNER
+#ifndef TRIPPLANNER_H
+#define TRIPPLANNER_H
+
 #include <iostream>
 #include <string>
 #include "Airline.h"
