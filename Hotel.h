@@ -1,5 +1,5 @@
-#ifndef HOTEL
-#define HOTEL
+#ifndef HOTEL_H
+#define HOTEL_H
 
 #include <string>
 using namespace std;
