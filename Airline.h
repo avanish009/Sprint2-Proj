@@ -1,4 +1,6 @@
-#pragma once
+#ifndef AIRLINE
+#define AIRLINE
+
 #include <string>
 #include <vector>
 #include <sstream>
@@ -39,3 +41,5 @@ public:
 	//gets the cost
 	double getCost();
 };
+
+#endif
