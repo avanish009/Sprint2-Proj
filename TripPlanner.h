@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TRIPPLANNER
+#define TRIPPLANNER
 #include <iostream>
 #include <string>
 #include "Airline.h"
@@ -89,3 +90,5 @@ void operator+(double& total, string cost);
 
 //clears the screen
 void clearScreen();
+
+#endif
