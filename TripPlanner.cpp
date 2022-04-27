@@ -146,17 +146,6 @@ void TripPlanner::setHotel(Hotel hotel)
 {
 	this->hotel = hotel;
 }
-
-/*void TripPlanner::setFood(Food restaurant)
-{
-	this->restaurant.push_back(restaurant);
-}
-
-void TripPlanner::setActivities(ThingsToDo activities)
-{
-	this->activities.push_back(activities);
-}
-*/
 //print out the trip summary
 void TripPlanner::printSummary()
 {
@@ -174,25 +163,6 @@ void TripPlanner::printSummary()
 	hotel.printHotel();
 	cout << string(2, '\n');
 
-	//get restaurants info
-/*	cout << "Picked restaurants: " << endl;
-	cout << endl;
-	for (int i = 0; i < restaurant.size(); i++)
-	{
-		restaurant[i].printRestaurants();
-		cout << endl;
-	}
-	cout << string(2, '\n');
-
-	//get activity info
-	cout << "Picked activities: " << endl;
-	cout << endl;
-	for (int i = 0; i < activities.size(); i++)
-	{
-		activities[i].printActivities();
-		cout << endl;
-	}
-	cout << string(2, '\n');  */
 
 	//display the estimate cost
 	cout << "The estimated trip cost is: $" << calcCost() << endl;
@@ -206,17 +176,9 @@ void TripPlanner::printSummary()
 double TripPlanner::calcCost()
 {
 	double estCost;
-//	int numberOfDays = activities.size();
 
 	//add the costs of ticket and hotel
 	estCost = airplaneTicket.getCost() + (hotel.getCost() * numberOfDays);
-
-	//convert the cost of restaurant and activities from string to double using operator
-/*	for (int i = 0; i < restaurant.size(); i++)
-	{
-		estCost + restaurant[i].getCost();
-		estCost + activities[i].getCost();
-	}  */
 	setTotal(estCost);
 
 	return estCost;
@@ -248,14 +210,6 @@ void TripPlanner::underBudget(int index)
 	{
 		resetHotel();
 	}
-/*	else if (index == 3)
-	{
-		resetFood();
-	}
-	else if (index == 4)
-	{
-		resetActivities();
-	} */
 
 	printSummary();
 	compareCost();
@@ -278,38 +232,6 @@ void TripPlanner::resetHotel()
 	temp.Search();
 	setHotel(hotel);
 }
-
-//allows user to reset the food choices
-/*void TripPlanner::resetFood()
-{
-	//clears the vector with food choices and creates temp object to store choices
-	restaurant.clear();
-	Food temp;
-	temp.setFilename(getDestination());
-
-	for (int i = 0; i < numberOfDays; i++)
-	{
-		temp.Search();
-		setFood(temp);
-	}
-}
-
-//allows user to reset the activities
-void TripPlanner::resetActivities()
-{
-	//clears the vector with activity choices and creates temp object to store choices
-	activities.clear();
-	ThingsToDo temp;
-	temp.setFilename(getDestination());
-
-	for (int i = 0; i < numberOfDays; i++)
-	{
-		temp.Search();
-		setActivities(temp);
-	}
-
-}  */
-
 
 //compares the string costs with a double budget
 bool operator>=(const double budget, string cost)

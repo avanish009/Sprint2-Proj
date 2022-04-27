@@ -118,34 +118,6 @@ int main()
 	trip.setHotel(hotel);
 	clearScreen();
 
-/*	//call function to set food file based on destination
-	Food food;
-	food.setFilename(trip.getDestination());
-	
-	//call function to search for restaurants the meets budget and print out the choices and ask user to enter choice
-	cout << "For each of the " << numberOfDays << " days you will stay, please choose a restaurant: " << endl;
-	
-	for (int i = 0; i < numberOfDays; i++)
-	{
-		food.Search();
-		trip.setFood(food);
-	}
-
-	clearScreen();
-
-	//call function to set activities file based on destination
-	ThingsToDo activities;
-	activities.setFilename(trip.getDestination());
-
-	//call function to search for activities that meets budget and print out the choices and ask user to enter choice
-	cout << "For each of the " << numberOfDays << " days that you will stay, please choose an activity: " << endl;
-
-	for (int i = 0; i < numberOfDays; i++)
-	{
-		activities.Search();
-		trip.setActivities(activities);
-	}   */
-
 	clearScreen();
 
 	//get the total cost of the created trip as well as the comparison with the budget
@@ -159,8 +131,6 @@ int main()
 		cout << "Your planned trip is above your budget. What category would you like to change? " << endl;
 		cout << "1) Airplane ticket" << endl;
 		cout << "2) Hotel" << endl;
-	//	cout << "3) Restaurants" << endl;
-	//	cout << "4) Activities" << endl;
 		cin >> choice;
 
 		//call function to change an object

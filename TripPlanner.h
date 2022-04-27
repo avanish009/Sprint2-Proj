@@ -4,9 +4,8 @@
 #include <iostream>
 #include <string>
 #include "Airline.h"
-//#include "Food.h"
 #include "Hotel.h"
-//#include "ThingsToDo.h"
+
 
 using namespace std;
 
@@ -20,9 +19,7 @@ private:
 
 	//store chosen objects in vectors
 	Airline airplaneTicket;
-//	vector <Food> restaurant;
 	Hotel hotel;
-//	vector <ThingsToDo> activities;
 public:
 
 	TripPlanner();
@@ -60,8 +57,6 @@ public:
 	//sets airline, hotel, food, and thingstodo
 	void setAirline(Airline ticket);
 	void setHotel(Hotel hotel);
-//	void setFood(Food restaurant);
-//	void setActivities(ThingsToDo activities);
 
 	//calculate trip total cost
 	double calcCost();
@@ -78,8 +73,6 @@ public:
 	//lets user rechoose certain objects
 	void resetAirplane();
 	void resetHotel();
-//	void resetFood();
-//	void resetActivities();
 
 };
 
