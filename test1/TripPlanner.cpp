@@ -10,7 +10,7 @@
 using namespace std;
 
 
-TripPlanner::TripPlanner()
+tripPlanner::tripPlanner()
 {
 	destination = " ";
 	budget = 0;
@@ -19,68 +19,68 @@ TripPlanner::TripPlanner()
 }
 
 //constructor with argument
-TripPlanner::TripPlanner(airline ticket, hotel hotel, string destination, double budget, int numberOfDays)
+tripPlanner::tripPlanner(airline ticket, hotel h1, string destination, double budget, int numberOfDays)
 {
 	EstCost = calcCost();
 	this->destination = destination;
 	this->budget = budget;
 	this->airplaneTicket = ticket;
-	this->hotel = hotel;
+	this->h1 = h1;
 //	this->restaurant.push_back(restaurant);
 //	this->activities.push_back(activities);
 	this->numberOfDays = numberOfDays;
 }
 
 //set the number of days
-void TripPlanner::setDays(int numberOfDays)
+void tripPlanner::setDays(int numberOfDays)
 {
 	this->numberOfDays = numberOfDays;
 }
 
 //returns the number of days
-int TripPlanner::getDays()
+int tripPlanner::getDays()
 {
 	return numberOfDays;
 }
 
 //set the budget
-void TripPlanner::setBudget(double budget)
+void tripPlanner::setBudget(double budget)
 {
 	this->budget = budget;
 }
 
 //returns budget
-double TripPlanner::getbudget()
+double tripPlanner::getbudget()
 {
 	return budget;
 }
 
 //sets the cost
-void TripPlanner::setTotal(double estCost)
+void tripPlanner::setTotal(double estCost)
 {
 	EstCost = estCost;
 }
 
 //returns the cost
-double TripPlanner::getTotal()
+double tripPlanner::getTotal()
 {
 	return EstCost;
 }
 
 //sets the user destination choice
-void TripPlanner::setDestination(string destination)
+void tripPlanner::setDestination(string destination)
 {
 	this->destination = destination;
 }
 
 //returns the user destination choice
-string TripPlanner::getDestination()
+string tripPlanner::getDestination()
 {
 	return destination;
 }
 
 //lets user choose destination
-void TripPlanner::DestinationMenu()
+void tripPlanner::destinationMenu()
 {
 	int destination;
 
@@ -136,17 +136,17 @@ void TripPlanner::DestinationMenu()
 }
 
 //sets airline, hotel, food, and thingstodo
-void TripPlanner::setAirline(airline ticket)
+void tripPlanner::setAirline(airline ticket)
 {
 	this->airplaneTicket = ticket;
 }
 
-void TripPlanner::setHotel(hotel hotel)
+void tripPlanner::setHotel(hotel h1)
 {
-	this->hotel = hotel;
+	this->h1 = h1;
 }
 //print out the trip summary
-void TripPlanner::printSummary()
+void tripPlanner::printSummary()
 {
 	cout << "Your trip to " << destination << endl;
 	cout << "Your budget is: $" << budget << endl;
@@ -159,7 +159,7 @@ void TripPlanner::printSummary()
 
 	//get hotel info
 	cout << "Hotel information: " << endl;
-	hotel.printHotel();
+	h1.printHotel();
 	cout << string(2, '\n');
 
 
@@ -172,12 +172,12 @@ void TripPlanner::printSummary()
 }
 
 //calculate the estimated cost
-double TripPlanner::calcCost()
+double tripPlanner::calcCost()
 {
 	double estCost;
 
 	//add the costs of ticket and hotel
-	estCost = airplaneTicket.getCost() + (hotel.getCost() * numberOfDays);
+	estCost = airplaneTicket.getCost() + (h1.getCost() * numberOfDays);
 	setTotal(estCost);
 
 	return estCost;
@@ -185,7 +185,7 @@ double TripPlanner::calcCost()
 
 //compares the estimated total cost with the budget
 
-bool TripPlanner::compareCost()
+bool tripPlanner::compareCost()
 {
 	if (budget < EstCost)
 	{
@@ -203,7 +203,7 @@ bool TripPlanner::compareCost()
 }
 
 //lets user choose which object they would like to reset
-void TripPlanner::underBudget(int index)
+void tripPlanner::underBudget(int index)
 {
 	if (index == 1)
 	{
@@ -219,7 +219,7 @@ void TripPlanner::underBudget(int index)
 }
 
 //allows user to reset the airplane ticket
-void TripPlanner::resetAirplane()
+void tripPlanner::resetAirplane()
 {
 	airline temp;
 	temp.setFilename(getDestination());
@@ -228,12 +228,12 @@ void TripPlanner::resetAirplane()
 }
 
 //allows user to reset the hotel choice
-void TripPlanner::resetHotel()
+void tripPlanner::resetHotel()
 {
 	hotel temp;
 	temp.setFilename(getDestination());
 	temp.Search();
-	setHotel(hotel);
+	setHotel(h1);
 }
 
 //compares the string costs with a double budget

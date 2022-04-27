@@ -4,7 +4,7 @@
 #include <vector>
 #include <fstream>
 #include <iomanip>
-#include <hotel.h>
+#include <Hotel.h>
 
 using namespace std;
 

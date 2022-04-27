@@ -17,7 +17,7 @@ int main()
     name, password, //the ones that are found in the file
     inName, inPassword, //the ones you are going to input from keyboard
     registerName, registerPassword; 
-	TripPlanner trip;
+	tripPlanner trip;
     while (1)
     {
         cout<<"(register/exit/login)\n"
@@ -75,7 +75,7 @@ int main()
                     //and it will automatically output a newline in console, alongside the string
                         <<"Welcome, "
                         <<inName;
-		   trip.DestinationMenu();
+		    trip.destinationMenu();
 			//Ask user to enter in their name
 //	string name;
 //	cout << "Enter your name: ";
@@ -109,12 +109,12 @@ int main()
 	clearScreen();
 
 	//call function to set hotel file based on destination
-	hotel hotel;
-	hotel.setFilename(trip.getDestination());
+	hotel h1;
+	h1.setFilename(trip.getDestination());
 
 	//call function to search for hotel that meets budget and print out the choices and ask user to enter choice
-	hotel.Search();
-	trip.setHotel(hotel);
+	h1.Search();
+	trip.setHotel(h1);
 	clearScreen();
 
 	clearScreen();

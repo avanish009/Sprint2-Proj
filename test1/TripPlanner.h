@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class TripPlanner
+class tripPlanner
 {
 private:
 	string destination;
@@ -19,13 +19,13 @@ private:
 
 	//store chosen objects in vectors
 	airline airplaneTicket;
-	hotel hotel;
+	hotel h1;
 public:
 
-	TripPlanner();
+	tripPlanner();
 
 	//tripPlanner constructor with argument
-	TripPlanner(Airline ticket, hotel hotel, string destination, double budget, int numberOfDays);
+	tripPlanner(airline ticket, hotel h1, string destination, double budget, int numberOfDays);
 	
 	//set number of days
 	void setDays(int numberOfDays);
@@ -52,11 +52,11 @@ public:
 	string getDestination();
 
 	//lets user choose destination
-	void DestinationMenu();
+	void destinationMenu();
 	
 	//sets airline and hotel
 	void setAirline(airline ticket);
-	void setHotel(hotel hotel);
+	void setHotel(hotel h1);
 
 	//calculate trip total cost
 	double calcCost();
