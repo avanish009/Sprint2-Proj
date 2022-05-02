@@ -1,13 +1,14 @@
 #include <iostream>
-#include <fstream>
-#include <cstring>
-#include <ctime>
-#include <thread>
-#include "../header/userdata.h"
-#include "../header/userlogin.h"
-#include "../header/patient.h"
-#include "../header/portal.h"
-#include "../header/doctor.h"
+#include <string>
+#include <string>
+#include <vector>
+#include <math.h>
+#include <TripPlanner.h>
+#include <Airline.h>
+#include <Hotel.h>
+#include <portal.h>
+
+using namespace std;
 
 using namespace std;
 
@@ -15,7 +16,7 @@ void welcome_screen()
 {                                                                             
     cout<<"\n\t\t\t=========================================================";
     cout<<"\n\t\t\t=\t\t\tWELCOME TO\t\t\t=";
-    cout<<"\n\t\t\t=\t\tHELPING HAND HOSPITAL\t\t\t=";
+    cout<<"\n\t\t\t=\t\tTrip Planner\t\t\t=";
     cout<<"\n\t\t\t=========================================================\n";
     cout<<"\n\nPress enter key to continue....";                              
     getchar();
@@ -25,7 +26,7 @@ void welcome_screen()
 void title()
 {                                                                             
     cout<<"\n\t\t\t=========================================================";
-    cout<<"\n\t\t\t=\t\tHELPING HAND HOSPITAL\t\t\t=";
+    cout<<"\n\t\t\t=\t\tKeep It Simple\t\t\t=";
     cout<<"\n\t\t\t=========================================================\n";
                                                                                 
 }
