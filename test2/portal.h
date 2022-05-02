@@ -2,11 +2,6 @@
 #define portal_h
 
 
-#include "userdata.h"
-#include "userlogin.h"
-#include "patient.h"
-#include "portal.h"
-#include "doctor.h"
 
 
 class info{
