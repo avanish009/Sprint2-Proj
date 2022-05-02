@@ -18,6 +18,9 @@ int main()
     inName, inPassword, //the ones you are going to input from keyboard
     registerName, registerPassword; 
 	tripPlanner trip;
+	
+	welcome_screen();
+	title();
     while (1)
     {
         cout<<"(register/exit/login)\n"
