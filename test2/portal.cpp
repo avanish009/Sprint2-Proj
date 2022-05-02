@@ -43,19 +43,19 @@ void logPortal()
       if(input == 1)
         {    
             system("clear");
-            signUp();
+            //signUp();
         }
 
     else if(input == 2)
         {
             system("clear");
-            login();
+            //login();
         }
         
    else if(input == 3)
         {   
             system("clear");
-            forgotPassword();
+            //forgotPassword();
         }
      else if(input == 4)
         {   
@@ -64,86 +64,14 @@ void logPortal()
         }    
     else if(input == 8)
         {   
-            readCredit();
+            //readCredit();
         }      
     
 }
 
-void adminPortal(char * name)
-{
-    title();
-    int input;
-    cout<<"\n\n\n\t\t\t\tADMIN PORTAL: "<<name;
-    cout<<"\t\t\t";
-    timeset();
-    cout<<"\n\n\t\t\t\tPress '1' to take Appointment\n\t\t\t\tPress '2' to view  Record";
-    cout<<"\n\t\t\t\tPress '3' to Search Record";
-    cout<<"\n\t\t\t\tPress '4' to Check Doctor Availabilty";
-    cout<<"\n\t\t\t\tPress '5' to Logout\n\n\n";
-    cout<<"\n\n\t\t\tPress here to continue... ";
-    cin>>input;
-      if(input == 1)
-        {    
-            system("clear");
-            addPatient(name);
-        }
 
-    else if(input == 2)
-        {
-            system("clear");
-            readPatient(name);
-        }
-        
-   else if(input == 3)
-        {   
-            system("clear");
-            searchPatient(name);
-        }
-    else if(input == 4)
-        {
-            system("clear");
-            checkDoc(name);
-        }
-     else if(input == 5)
-        {
-            system("clear");
-            logPortal();
-        }           
-    
-}
 
-void docPortal(char * name,int id)
-{
-    title();
-    int input;
-    cout<<"\n\n\n\t\t\t\tDOCTOR PORTAL: "<<name;
-    cout<<"\t\t\t";
-    timeset();
-    yourAppoint(id);
-    cout<<"\n\n\t\t\t\tPress '1' to Complete Appointment";
-    cout<<"\n\t\t\t\tPress '2' to Change Status";
-    cout<<"\n\t\t\t\tPress '3' to Logout\n\n\n";
-    cout<<"\n\n\t\t\tPress here to continue... ";
-    cin>>input;
-      if(input == 1)
-        {    
-            system("clear");
-            complete(name,id);
-        }
 
-    else if(input == 2)
-        {
-            system("clear");
-            changeStatus(name,id);;
-        }
-        
-   else if(input == 3)
-        {
-            system("clear");
-            logPortal();
-        }     
-    
-}
 
 void timeset(){
     time_t now = time(0);
