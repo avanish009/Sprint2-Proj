@@ -22,20 +22,17 @@ int main()
 	
 	welcome_screen();
 	title();
-    while (1)
+while (1)
     {
-        cout<<"(register/exit/login)\n"
-            <<"Command: ";
-        getline(cin, command);
-        if (command=="exit")
-
-        {
-            return 1;
-        }
-        if (command=="register")
-	       
-	        {
-       
+	int input;
+    cout<<"\n\n\n\t\t\t\tPORTAL:";
+    cout<<"\n\n\t\t\t\tPress '1' to Register\n\t\t\t\tPress '2' to Login\n\t\t\t\tPress '3' to Forget Password";
+    cout<<"\n\t\t\t\tPress '4' to exit Program\n\n\n";
+    cout<<"\n\n\t\t\tPress here to continue... ";
+    cin>>input;
+      if(input == 1)
+        {    
+            system("clear");
             ofstream g("registration.dat");
             if (!g.is_open())
             {
@@ -50,9 +47,13 @@ int main()
             g<<registerName; 
  	    g<<'\n';
             g<<registerPassword; 
-	    g.close(); 
-	}
-        if (command=="login")
+	    g.close();
+        }
+
+    else if(input == 2)
+        {
+            system("clear");
+            if (command=="login")
         {
 		ifstream f("registration.dat");
 		if (!f.is_open())
@@ -147,6 +148,21 @@ int main()
             }
          
         }
+        }
+        
+   else if(input == 3)
+        {   
+            system("clear");
+            //forgotPassword();
+        }
+     else if(input == 4)
+        {   
+            system("clear");
+            exit(0);
+        }
+    
+        
+        
         cout<<"\n\n\n\n\n"; //give it 5 newlines
     }
     return 1;
