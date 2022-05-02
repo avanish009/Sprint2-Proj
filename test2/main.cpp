@@ -53,8 +53,7 @@ while (1)
     else if(input == 2)
         {
             system("clear");
-            if (command=="login")
-        {
+            
 		ifstream f("registration.dat");
 		if (!f.is_open())
 		{
@@ -147,7 +146,7 @@ while (1)
                 cout<<"incorrect name or password\n";
             }
          
-        }
+        
         }
         
    else if(input == 3)
