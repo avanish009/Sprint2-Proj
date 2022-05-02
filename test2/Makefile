@@ -3,8 +3,8 @@ CFLAGS = -g  -Wall -Wextra
 
 INCLUDES = -I ./
 
-run: main.o TripPlanner.o Airline.o Hotel.o
-	${CC} ${CFLAGS} main.o TripPlanner.o  Airline.o Hotel.o -o run
+run: main.o TripPlanner.o Airline.o Hotel.o portal.o
+	${CC} ${CFLAGS} main.o TripPlanner.o  Airline.o Hotel.o portal.o -o run
 
 main.o: main.cpp
 	${CC} ${CFLAGS} ${INCLUDES} -c main.cpp
@@ -17,6 +17,9 @@ Airline.o: Airline.cpp
 
 Hotel.o: Hotel.cpp
 	${CC} ${CFLAGS} ${INCLUDES} -c Hotel.cpp
+	
+portal.o: portal.cpp
+	${CC} ${CFLAGS} ${INCLUDES} -c portal.cpp
 
 
 clean:
