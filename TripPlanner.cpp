@@ -100,7 +100,7 @@ void tripPlanner::destinationMenu()
 		cout << "Which city would you like to go to? " << endl;
 		cout << "1) New Delhi" << endl;	
 		cin >> destination;
-		if (destination == 0 )
+		if (destination == 1 )
 		{
 			setDestination("Delhi");
 		}

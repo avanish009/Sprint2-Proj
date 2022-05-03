@@ -1,6 +1,7 @@
 CC = g++
-CFLAGS = -g  -Wall -Wextra 
+CFLAGS = -g -Wall -Wextra -Werror 
 CCOV = -fprofile-arcs -ftest-coverage
+
 
 INCLUDES = -I ./
 
@@ -19,7 +20,7 @@ Airline.o: Airline.cpp
 Hotel.o: Hotel.cpp
 	${CC} ${CFLAGS} ${CCOV} ${INCLUDES} -c Hotel.cpp
 
-
 clean:
 	echo "Cleaning....."
 	rm *.o run *.gcov *.gcda *.gcno
+	
