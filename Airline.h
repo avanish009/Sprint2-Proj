@@ -32,7 +32,7 @@ public:
 	void setFilename(string destination);
 	string getFilename();
 
-	//gets the index of the choice the user wants and stores the 
+	//gets the index of the choice the user wants  
 	void Search();
 
 	//prints info

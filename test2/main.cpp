@@ -32,7 +32,7 @@ int main()
 	       
 	        {
        
-            ofstream g("registration.dat");
+            ofstream g("registration.dat", ios::out | ios::binary);
             if (!g.is_open())
             {
                 cout<<"could not open file\n";
@@ -50,7 +50,7 @@ int main()
 	}
         if (command=="login")
         {
-		ifstream f("registration.dat");
+		ifstream f("registration.dat", ios::in | ios::binary);
 		if (!f.is_open())
 		{
 			cout<<"could not open file\n"; 
