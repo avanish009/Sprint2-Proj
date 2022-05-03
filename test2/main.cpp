@@ -79,7 +79,7 @@ int main()
 			//Ask user to enter in their name
 //	string name;
 //	cout << "Enter your name: ";
-	cin >> name;
+//	cin >> name;
 
 	cout << "Welcome to your TripPlanner, " << name << endl;
 	
