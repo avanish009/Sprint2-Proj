@@ -18,23 +18,14 @@ int main()
    	 inName, inPassword, //the ones you are going to input from keyboard
    	 registerName, registerPassword; 
 	tripPlanner trip;
-	system("clear");
-<<<<<<< HEAD
+	system("clear");                                                                       
     cout<<"\n\t\t\t=========================================================";
     cout<<"\n\t\t\t=\t\t\tWELCOME TO\t\t\t=";
     cout<<"\n\t\t\t=\t\t\tTRIP PLANNER\t\t\t=";
-=======
-	void welcome_screen()
-{                                                                             
-    cout<<"\n\t\t\t=========================================================";
-    cout<<"\n\t\t\t=\t\t\tWELCOME TO\t\t\t=";
-    cout<<"\n\t\t\t=\t\tHELPING HAND HOSPITAL\t\t\t=";
->>>>>>> refs/remotes/origin/main
     cout<<"\n\t\t\t=========================================================\n";
     cout<<"\n\nPress enter key to continue....";                              
     getchar();
     system("clear");
-<<<<<<< HEAD
 	while(1)
 	{                                                                           
 	     	cout<<"\n\n\n\t\t\t\t\t\tPORTAL ";
@@ -92,35 +83,9 @@ int main()
 					<<"\nWelcome to your TripPlanner,"<<inName<<endl;
 			    	trip.destinationMenu();
 			
-=======
-}
+			
 
-void title()
-{                                                                             
-    cout<<"\n\t\t\t=========================================================";
-    cout<<"\n\t\t\t=\t\tHELPING HAND HOSPITAL\t\t\t=";
-    cout<<"\n\t\t\t=========================================================\n";
-                                                                                
-}
 
-void logPortal()
-{
-    title();
-    int input;
-    cout<<"\n\n\n\t\t\t\t\tPORTAL ";
-    cout<<"\n\t\t\t----------------------------------------------------------";
-    cout<<"\n\n\t\t\t\tPress '1' to Register\n\t\t\t\tPress '2' to Login\n\t\t\t\tPress '3' to Forget Password";
-    cout<<"\n\t\t\t\tPress '4' to exit Program\n\n\n";
-    cout<<"\n\n\t\t\tPress here to continue... ";
-    while (1)
-    {
-        cout<<"(register/exit/login)\n"
-            <<"Command: ";
-        getline(cin, command);
-        if (command=="exit")
->>>>>>> refs/remotes/origin/main
-
-	
 	//ask budget
 	double budget;
 	cout << "What is your budget? ";
@@ -183,5 +148,7 @@ void logPortal()
     return 1;
 
 	
-}
+
+    }
+
 
