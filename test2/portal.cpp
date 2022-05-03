@@ -36,8 +36,8 @@ void logPortal()
     title();
     int input;
     cout<<"\n\n\n\t\t\t\tPORTAL:";
-    cout<<"\n\n\t\t\t\tPress '1' to Register\n\t\t\t\tPress '2' to Login\n\t\t\t\tPress '3' to Forget Password";
-    cout<<"\n\t\t\t\tPress '4' to exit Program\n\n\n";
+    cout<<"\n\n\t\t\t\tPress '1' to Register\n\t\t\t\tPress '2' to Login";
+    cout<<"\n\t\t\t\tPress '3' to exit Program\n\n\n";
     cout<<"\n\n\t\t\tPress here to continue... ";
     cin>>input;
       if(input == 1)
@@ -55,17 +55,9 @@ void logPortal()
    else if(input == 3)
         {   
             system("clear");
-            //forgotPassword();
-        }
-     else if(input == 4)
-        {   
-            system("clear");
-            exit(0);
-        }    
-    else if(input == 8)
-        {   
-            //readCredit();
-        }      
+	    exit(0);
+           
+        } 
     
 }
 
