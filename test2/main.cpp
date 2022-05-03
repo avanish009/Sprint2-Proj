@@ -137,7 +137,7 @@ int main()
 	}
 
 	return 0;
-		   break;
+		 //  break;
 	   	}
                 cout<<"incorrect name or password\n";
             }
