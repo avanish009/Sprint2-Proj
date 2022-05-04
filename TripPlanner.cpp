@@ -238,7 +238,7 @@ void tripPlanner::resetHotel()
 }
 
 //compares the string costs with a double budget
-bool operator>=(const double budget, string cost)
+bool operator>=(const double budget, string const &cost)
 {
 	int estCost = 0;
 
@@ -276,7 +276,7 @@ bool operator>=(const double budget, string cost)
 }
 
 //adds the string costs to a double total
-void operator+ (double& total, string cost)
+void operator+ (double& total, string const &cost)
 {
 	if (cost == "$")
 	{
