@@ -18,15 +18,21 @@ int init_Clean(void)
    return 0;
 }
 
-/*void test_func(void)
+//void test_func(void)
+//{
+//	return 0;
+//}
+
+	
+/*
 {
      
-      /*CU_ASSERT(add(2,3)==(2+2));
-      CU_ASSERT(mul(4.0,2.0)==(8.1));*/
-      CU_ASSERT(checkCredit("gaurav"));
-      CU_ASSERT(checkCredit("kindo"));
-      CU_ASSERT(checkCredit("mrkumar"));
-      CU_ASSERT(checkCredit("gkumar"));
+      CU_ASSERT(add(2,3)==(2+2));
+      CU_ASSERT(mul(4.0,2.0)==(8.1));
+      CU_ASSERT(checkCredit("kabilan"));
+      CU_ASSERT(checkCredit("dm"));
+      CU_ASSERT(checkCredit("mrkabilan"));
+      CU_ASSERT(checkCredit("dkabilan"));
 
 
       // CU_ASSERT(readDoctor(1)==("Available"));
@@ -35,10 +41,10 @@ int init_Clean(void)
 } */
 void test_func1(void)
 {
-       CU_ASSERT(checkNname("Rohan"));
-       CU_ASSERT(checkNname("1rahul"));
-       CU_ASSERT(checkNname("Ro@&#&han"));
-       CU_ASSERT(checkName("rohan"));
+       CU_ASSERT(checkName("Sanjay"));
+       CU_ASSERT(checkName("1sanjay"));
+       CU_ASSERT(checkName("Sa@&#&njay"));
+       CU_ASSERT(checkName("sanjay"));
 
 
 }
@@ -70,7 +76,7 @@ int main()
    /* add the tests to the suite */
    /* NOTE - ORDER IS IMPORTANT - MUST TEST fread() AFTER fprintf() */
    if ((NULL == CU_add_test(pSuite, "test of checkName(Rohan)", test_func1))
-      ||(NULL == CU_add_test(pSuite, "test of logPortal(1)", test_func4)))
+      ||(NULL == CU_add_test(pSuite, "test of destinationMenu(1)", test_func2)))
    {
       CU_cleanup_registry();
       return CU_get_error();
